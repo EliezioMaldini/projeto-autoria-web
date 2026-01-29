@@ -1,0 +1,589 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif; /* Fonte estilo medieval */
+    
+    /* Cor de fundo de segurança caso a imagem demore a carregar ou falhe */
+    background-color: #2c3e50; 
+
+    /* --- SUBSTITUIÇÃO: Imagem de Fundo --- */
+    /* Certifique-se de que '1.jpg' está na mesma pasta que o arquivo .css e .html */
+    background-image: url('1.jpg');
+
+    /* Faz a imagem cobrir toda a área visível da tela, esticando proporcionalmente */
+    background-size: cover;
+
+    /* Centraliza a imagem tanto horizontal quanto verticalmente */
+    background-position: center center;
+
+    /* Impede que a imagem se repita se a tela for muito grande */
+    background-repeat: no-repeat;
+
+    /* Efeito Parallax: O fundo fica fixo enquanto você rola a página para baixo */
+    background-attachment: fixed;
+    /* ------------------------------------ */
+
+    color: #fff;
+    min-height: 100vh;
+    /* Garante que o corpo ocupe pelo menos a altura total da tela */
+}
+
+.home-section {
+    background: #3e2723; /* Marrom escuro fundo */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjM2UyNzIzIiAvPgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNGUzNDJlIiAvPgo8L3N2Zz4='); /* Textura de ruído */
+    border: 4px solid #5d4037;
+    border-top: none;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    color: #f5deb3; /* Cor creme/trigo para o texto */
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Vídeo ocupa um pouco mais de espaço */
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* --- Estilos Específicos do Inicio --- *//* --- Estilos Específicos do Inicio --- *//* --- Estilos Específicos do Inicio --- *//* --- Estilos Específicos do Inicio --- */
+
+.home-section {
+    background: #3e2723; /* Marrom escuro fundo */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjM2UyNzIzIiAvPgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNGUzNDJlIiAvPgo8L3N2Zz4='); /* Textura de ruído */
+    border: 4px solid #5d4037;
+    border-top: none;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    color: #f5deb3; /* Cor creme/trigo para o texto */
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Vídeo ocupa um pouco mais de espaço */
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* --- Coluna de Vídeo --- */
+/* Garante que o vídeo ocupe toda a largura da moldura e mantenha a proporção */
+.video-frame iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém o formato Widescreen */
+    border: none;
+    display: block; /* Remove espaços em branco inferiores */
+}
+
+.video-frame {
+    background: #1a100e;
+    padding: 8px; 
+    border: 1px solid #5d4037;
+    box-shadow: inset 0 0 10px #000;
+}
+
+/* --- Coluna de Texto --- */
+.text-column h2 {
+    font-size: 1.8rem;
+    color: #a5d6a7; /* Verde pálido similar à imagem */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0 #000;
+    font-weight: 700;
+}
+
+.text-column p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    font-family: sans-serif; /* Texto corrido é mais legível em sans-serif */
+}
+
+/* Responsividade para Inicio */
+@media (max-width: 768px) {
+    .home-grid {
+        grid-template-columns: 1fr; /* Empilha vídeo e texto */
+    }
+    
+    .text-column {
+        text-align: left;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* --- Estilos Específicos da Página de Creditos --- *//* --- Estilos Específicos da Página de Creditos --- *//* --- Estilos Específicos da Página de Creditos --- */
+
+.credits-section {
+    background: #3e2723; /* Fundo Marrom Escuro */
+    /* Textura de ruído sutil para consistência */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjM2UyNzIzIiAvPgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNGUzNDJlIiAvPgo8L3N2Zz4=');
+    border: 4px solid #5d4037;
+    border-top: none; /* A grama faz o topo */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    min-height: 400px;
+}
+
+/* Título "Creditos" pequeno no topo */
+.page-title {
+    font-size: 1.5rem;
+    color: #f5deb3;
+    padding: 15px 20px;
+    border-bottom: 2px solid #5d4037;
+    margin: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+/* Item individual (Linha) */
+.credit-item {
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 2px solid #5d4037; 
+    background: linear-gradient(to bottom, rgba(255,255,255,0.03) 0%, transparent 100%);
+    transition: background 0.3s;
+}
+
+.credit-item:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.credit-item:hover {
+    background: rgba(255,255,255,0.05); /* Destaque ao passar o mouse */
+}
+
+/* Estilo do Cargo (Verde Água) */
+.role {
+    color: #80deea; /* Tom ciano/pastel similar à imagem */
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px #000;
+    font-weight: 700;
+}
+
+/* Estilo do Nome (Branco/Creme) */
+.name {
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #000;
+    font-family: sans-serif; /* Texto mais limpo para o nome */
+}
+
+/* --- Estilos Específicos da Página News --- *//* --- Estilos Específicos da Página News --- *//* --- Estilos Específicos da Página News --- *//* --- Estilos Específicos da Página News --- */
+
+/* Container do Grid */
+.news-grid {
+    display: grid;
+    /* Cria colunas automáticas com largura mínima de 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; /* Espaço entre os cards */
+    padding-top: 10px;
+}
+
+/* O Cartão de Notícia */
+.news-card {
+    /* Não tem background aqui pois o fundo é dentro do card-content */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área interna do card (abaixo da grama) */
+.card-content {
+    background: #3e2723; /* Fundo Marrom */
+    border: 4px solid #5d4037;
+    border-top: none; /* A grama faz o topo */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que todos tenham a mesma altura */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+
+/* Imagem (Placeholder) */
+.news-img {
+    width: 100%;
+    height: 180px; /* Define uma altura fixa para manter o alinhamento */
+    object-fit: cover; /* Garante que a imagem preencha a área sem esticar/deformar */
+    border-bottom: 2px solid #5d4037;
+    display: block; /* Remove espaços brancos indesejados abaixo da imagem */
+}
+
+/* Corpo do texto */
+.news-body {
+    padding: 15px;
+    flex-grow: 1; /* Empurra o rodapé para baixo */
+}
+
+.news-body h3 {
+    color: #f5deb3; /* Cor creme para o título */
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.news-body p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+/* Rodapé do Card (Data e Link) */
+.news-footer {
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.2); /* Fundo um pouco mais escuro */
+    border-top: 1px solid #5d4037;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+}
+
+.date {
+    color: #bdbdbd;
+}
+
+.read-more {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #80deea; /* Azul ciano no hover */
+    text-decoration: underline;
+}
+
+/* --- Header & Logo --- */
+.site-header {
+    text-align: center;
+    padding: 30px 0 10px; /* Espaçamento ajustado para a imagem */
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.logo-img {
+    max-width: 100%;    /* Garante que a imagem não vaze em telas pequenas */
+    width: 450px;       /* Tamanho base sugerido (ajuste conforme a resolução da sua imagem) */
+    height: auto;       /* Mantém a proporção */
+    display: block;
+    
+    /* Filtro de sombra para dar destaque sobre o fundo (drop-shadow respeita transparência do PNG) */
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+/* Ajuste Mobile para a Logo */
+@media (max-width: 600px) {
+    .logo-img {
+        width: 280px; /* Logo menor em celulares */
+    }
+}
+
+.logo {
+    font-size: 4rem;
+    color: #4CAF50; /* Verde Terraria */
+    text-shadow: 
+        3px 3px 0px #3e2723, 
+        -1px -1px 0 #81c784;
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* Efeito de pixel art/pedra no texto */
+    background: linear-gradient(to bottom, #81c784 50%, #2e7d32 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+/* Contorno do texto para legibilidade sobre fundo */
+.logo::after {
+    content: 'Terraria';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-fill-color: #3e2723;
+}
+
+/* --- Navegação --- */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    margin-bottom: -15px; /* Sobreposição um pouco maior na caixa de conteúdo */
+}
+
+.nav-container {
+    display: inline-flex; /* Ajusta a largura ao conteúdo dos links */
+    align-items: center;
+    background: #5d4037;
+    /* Textura de madeira */
+    background-image: linear-gradient(90deg, #5d4037 0%, #4e342e 50%, #5d4037 100%);
+    border: 3px solid #ffcc80; /* Borda Dourada */
+    border-radius: 6px;
+    padding: 0 10px; /* Padding lateral reduzido */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    height: 45px; /* Altura levemente reduzida para ficar mais elegante */
+    position: relative;
+}
+
+/* Elementos decorativos estilo 'parafusos' nas pontas da nav */
+.nav-container::before, .nav-container::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffcc80;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: inset 1px 1px 2px #000;
+}
+.nav-container::before { left: 6px; }
+.nav-container::after { right: 6px; }
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    padding: 0 10px; /* Espaço para não colar nos 'parafusos' */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #d7ccc8;
+    padding: 0 18px; /* Mais espaço lateral entre os links */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
+    transition: color 0.2s, background 0.2s;
+    line-height: 45px; /* Igual à altura do container para centralizar */
+    display: block;
+    border-right: 1px solid rgba(0,0,0,0.3); /* Divisória escura */
+    border-left: 1px solid rgba(255,255,255,0.05); /* Luz sutil na esquerda */
+}
+
+.nav-list li:first-child a { border-left: none; }
+.nav-list li:last-child a { border-right: none; }
+
+.nav-list li a:hover, 
+.nav-list li a.active {
+    color: #fff;
+    background: rgba(255, 204, 128, 0.15);
+    text-shadow: 0 0 5px #ffcc80;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        height: auto;
+        width: 95%; /* Ocupa quase toda a tela no celular */
+        padding: 5px;
+        flex-direction: column;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-list li a {
+        border: none; /* Remove divisórias no mobile para não ficar estranho */
+        padding: 5px 10px;
+        line-height: normal;
+        margin: 2px;
+        border-radius: 4px;
+    }
+}
+
+/* --- Conteúdo Principal (Galeria) --- *//* --- Conteúdo Principal (Galeria) --- *//* --- Conteúdo Principal (Galeria) --- *//* --- Conteúdo Principal (Galeria) --- */
+.content-area {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Efeito de Grama no topo da caixa */
+.grass-border {
+    height: 15px;
+    background-color: #4CAF50;
+    background-image: 
+        linear-gradient(45deg, #388E3C 25%, transparent 25%), 
+        linear-gradient(-45deg, #388E3C 25%, transparent 25%);
+    background-size: 10px 10px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: -1px; /* Juntar com a caixa */
+    border-bottom: 3px solid #2e7d32;
+}
+
+.galleries-section {
+    background: #3e2723; /* Marrom escuro fundo */
+    border: 4px solid #5d4037; /* Borda mais clara */
+    border-top: none;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjM2UyNzIzIiAvPgo8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNGUzNDJlIiAvPgo8L3N2Zz4='); /* Padrão de ruído sutil */
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #5d4037;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, rgba(0,0,0,0.3), transparent);
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #f5deb3; /* Trigo / Creme */
+    text-shadow: 2px 2px 0 #000;
+    margin-left: 10px;
+}
+
+.icon-gallery {
+    font-size: 2rem;
+}
+
+/* Grid de Imagens */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.moonlord-bg { background-color: #8B0000; }
+.terraria-bg { background-color: #2F4F4F; }
+.cogumelos-bg { background-color: #3b2518; }
+.jungle-bg { background-color: #126b41; }
+
+.gallery-item {
+    background: #1a100e;
+    padding: 5px;
+    border: 2px solid #5d4037; /* Borda um pouco mais grossa para estilo medieval */
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #ffcc80;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.img-container {
+    width: 100%;
+    height: 150px; /* Aumentei um pouco a altura para melhor visibilidade */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Garante que a imagem preencha o espaço sem distorcer */
+.gallery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Estilo do texto sobre a imagem */
+.img-container span {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+/* --- Footer da Seção --- */
+.section-footer {
+    text-align: right;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 10px;
+}
+
+.show-more {
+    color: #a5d6a7; /* Verde claro */
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.show-more:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+    }
+    
+    .buy-button-container {
+        order: -1; /* Botão vai para o topo no mobile */
+        top: 0;
+        margin-bottom: 10px;
+        transform: none;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .buy-btn {
+        transform: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+}
